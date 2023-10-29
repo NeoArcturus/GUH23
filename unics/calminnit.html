@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oops, Looks Like You Had a Bit Too Many</title>
+    <style>
+        body {
+            background-color: #FFD700;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0px; /* Adjusted side margins */
+            transition: filter 0.5s ease; /* Added transition for the filter effect */
+        }
+        .funny-text {
+            display: inline-block;
+            font-family: 'Arial', 'Times New Roman', 'Verdana', 'Courier New', 'Georgia', 'Comic Sans MS', 'Impact', 'Tahoma', 'Lucida Console', 'Trebuchet MS', 'Arial Black', 'Garamond', 'Palatino Linotype';
+        }
+        h1 {
+            font-size: 3em;
+            color: #800080;
+        }
+        img {
+            border: 1px solid #800000;
+            border-radius: 0;
+            max-width: 100%;
+            display: block;
+            margin-left: 0;
+        }
+        .image-container {
+            display: inline-block;
+            text-align: left;
+        }
+        .gif-container {
+            display: inline-block;
+        }
+        p {
+            font-size: 1.5em;
+            color: #228B22;
+            margin-top: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+            filter: blur(2px); /* Added blur effect to the buttons */
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #000080;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 5px; /* Reduced footer padding */
+        }
+    </style>
+</head>
+<body onclick="displayGif()">
+
+    <h1>
+        <span class="funny-text">Oops, Looks Like You Had a Bit Too Many</span>
+    </h1>
+
+    <script>
+        var tipsy = prompt("How many drinks have you had?");
+        // alert("You are feeling " + tipsy + ". Oops, looks like you had a bit too many!");
+
+    </script>
+
+    <div class="image-container">
+        <img src="https://i.pinimg.com/736x/fd/af/36/fdaf36e9de63c1beeb080b1562ce0b66.jpg" alt="Yolo Funny Pic" style="border-radius: 0;">
+    </div>
+    <div class="gif-container" id="gifContainer"></div>
+
+    <p>
+        <span class="funny-text">Do you feel the effects of Alcohol</span>
+    </p>
+
+    <div>
+        <button onclick="deleteInput()">Yes</button>
+        <button onclick="cancelInput()">No</button>
+        <button onclick="displayGif()">Maybe</button>
+    </div>
+
+    <footer>
+        <p>This website captures the essence of being tipsy. © 2023 Oops, Looks Like You Had a Bit Too Many <br>
+            We DO NOT promote Consumption of Alcohol, except on St. Patrick's Day.
+        </p>
+    </footer>
+
+    <script>
+        function deleteInput() {
+            document.body.style.filter = 'blur(5px)'; // Apply blur filter to the whole page
+            alert("You just clicked 'Yes'.");
+        }
+
+        function cancelInput() {
+            alert("Liar");
+        }
+
+        function displayGif() {
+            var gifContainer = document.getElementById('gifContainer');
+            var img = document.createElement('img');
+            img.src = 'https://media3.giphy.com/media/2tWxqDPKHpjFYaXVTl/giphy.gif?cid=ecf05e47bj3vhw39rb9qpyi08n10w3i99kbhfyiat99ma748&ep=v1_gifs_search&rid=giphy.gif&ct=g';
+            gifContainer.appendChild(img);
+        }
+    </script>
+
+</body>
+</html>

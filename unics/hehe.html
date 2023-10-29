@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hehe</title>
+    <style>
+      body {
+        background-image: url("/Users/adwikipedia/Desktop/Hackathon/unics/giphy.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .options {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      button {
+        margin: 0 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><font color="black">Final Decision</font></h2>
+
+    <div class="options">
+      <button onclick="End()">I am now quitting alcohol forever</button>
+      <button onclick="bringResponsiblePerson()">
+        Volunteer at next GUH as reparation
+      </button>
+    </div>
+
+    <script>
+      function End() {
+        alert("Goodluck and Godspeed...");
+        document.body.style.backgroundImage =
+          "url('/Users/adwikipedia/Desktop/Hackathon/unics/matter.gif')";
+        setTimeout(() => {
+          alert("PSYCH");
+          document.body.style.backgroundImage =
+            "url('/Users/adwikipedia/Desktop/Hackathon/unics/giphy.gif')";
+        }, 5000); // Reverts back after 5 seconds
+      } 
+
+      function bringResponsiblePerson() {
+        alert(
+          " Wise decision. If this doesn't work, remember money solves most problems. "
+        );
+        window.location.href = "payup.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oops, Looks Like You Had a Bit Too Many</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        transition: filter 0.5s ease;
+        animation: strobe 1s infinite;
+      }
+
+      @keyframes strobe {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      .funny-text {
+        display: inline-block;
+        font-family: "Arial", "Times New Roman", "Verdana", "Courier New",
+          "Georgia", "Comic Sans MS", "Impact", "Tahoma", "Lucida Console",
+          "Trebuchet MS", "Arial Black", "Garamond", "Palatino Linotype";
+      }
+
+      h1 {
+        font-size: 3em;
+        color: #800080;
+      }
+
+      .curved-text {
+        display: flex;
+        justify-content: center;
+      }
+
+      .curved-text h1 {
+        font-size: 4em;
+        color: #000000;
+        transform: perspective(500px) rotateX(25deg);
+      }
+      .image-container {
+        margin-top: 20px; /* Adjust the margin as needed */
+        margin-bottom: 10px;
+      }
+      .moving-image {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-image: url("https://i.pinimg.com/736x/fd/af/36/fdaf36e9de63c1beeb080b1562ce0b66.jpg");
+        background-size: cover;
+        animation: move linear 10s infinite;
+      }
+
+      @keyframes move {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: calc(100% - 100px); /* Adjust the image width */
+        }
+      }
+      @keyframes shake {
+        10%,
+        90% {
+          transform: translate(-1px, 0);
+        }
+        20%,
+        80% {
+          transform: translate(2px, 0);
+        }
+        30%,
+        50%,
+        70% {
+          transform: translate(-4px, 0);
+        }
+        40%,
+        60% {
+          transform: translate(4px, 0);
+        }
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 5px; /* Reduced footer padding */
+      }
+    </style>
+  </head>
+  <body onclick="displayGif()">
+    <div class="curved-text">
+      <h1>Oops, Looks Like You Had a Bit Too Many</h1>
+    </div>
+
+    <script>
+      var tipsy = prompt("How many drinks have you had?");
+      alert("Strobe effect warning!!");
+    </script>
+    <p>
+      <span class="funny-text">
+        <font size="4"
+          >Would you say you are inebriated/sloshed/toasted/buzzed?
+        </font>
+      </span>
+    </p>
+ 
+    <div>
+      <button onclick="deleteInput()">Yes</button>
+      <button onclick="cancelInput()">No</button>
+      <button onclick="maybeinput()">Maybe</button>
+    </div>
+
+    <div
+      class="image-container"
+      class="moving-image"
+      style="text-align: center"
+    >
+      <img
+        src="https://i.pinimg.com/736x/fd/af/36/fdaf36e9de63c1beeb080b1562ce0b66.jpg"
+        alt="Yolo Funny Pic"
+        style="border-radius: 0"
+      />
+    </div>
+    <div class="gif-container" id="gifContainer"></div>
+
+    <footer class="footer">
+      <p>
+        This website captures the essence of being tipsy. © 2023 Oops, Looks
+        Like You Had a Bit Too Many <br />
+        We DO NOT promote Consumption of Alcohol, except on St. Patrick's Day.
+      </p>
+    </footer>
+
+    <script>
+      function applyBlur() {
+        document.body.style.filter = "blur(5px)";
+        setTimeout(function () {
+          document.body.style.filter = "none";
+        }, 10000); // 10000 milliseconds = 10 seconds
+      }
+      function shakeScreen() {
+        document.body.style.animation = "shake 3s";
+        setTimeout(function () {
+          document.body.style.animation = "none";
+        }, 3000); // 500 milliseconds = 0.5 seconds
+      }
+      function deleteInput() {
+        applyBlur(); // Apply blur filter to the whole page
+        alert("Have you considered switching your addiction towards caffeine?");
+      }
+
+      function cancelInput() {
+        alert("Liar");
+
+        window.location.href = "quences.html"; // Redirect to consequences page
+      }
+      function maybeinput() {
+        prompt("What colour is the background? ");
+        alert("Eh You're Drunk");
+        deleteInput();
+      }
+    </script>
+  </body>
+</html>

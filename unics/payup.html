@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time to Pay Up</title>
+    <style>
+      body {
+        background-image: url("/Users/adwikipedia/Desktop/Hackathon/unics/monae.gif");
+        background-size: cover;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><font color="black">Great! time to pay up</font></h1>
+    <div class="button-container">
+      <button onclick="notWantTo()">I don't want to</button>
+      <button onclick="sure()">Sure</button>
+    </div>
+
+    <script>
+      function notWantTo() {
+        alert("Wrong answer, Try again:)");
+        window.location.href("payup.html");
+      }
+
+      function sure() {
+        alert("Excellent! Please hand cash in the trusted hands of the GUH team!");
+        alert("Tipping mandatory");
+        window.close();
+      }
+    </script>
+  </body>
+</html>
