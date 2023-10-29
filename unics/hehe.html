@@ -11,6 +11,12 @@
         text-align: center;
         font-family: Arial, sans-serif;
       }
+      .new-gif {
+        background-image: url("/Users/adwikipedia/Desktop/Hackathon/unics/matter.gif");
+        background-size: contain; /* Not to be confused with `auto auto` */
+        /* background-repeat: no-repeat; */
+        background-attachment: fixed;
+      }
 
       .options {
         display: flex;
@@ -35,7 +41,7 @@
       </button>
     </div>
 
-    <script>
+    <script class="new-gif">
       function End() {
         alert("Goodluck and Godspeed...");
         document.body.style.backgroundImage =
@@ -44,7 +50,7 @@
           alert("PSYCH");
           document.body.style.backgroundImage =
             "url('/Users/adwikipedia/Desktop/Hackathon/unics/giphy.gif')";
-        }, 5000); // Reverts back after 5 seconds
+        }, 3500); // Reverts back after 3.5 seconds
       } 
 
       function bringResponsiblePerson() {
